@@ -1,1 +1,7 @@
+libs/
+decodificaMensagem.php
 env.php
+enviarEmail.php
+funcRedacao.php
+funcSimulado.php
+nasp.php

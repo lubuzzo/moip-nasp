@@ -1,16 +1,22 @@
 <?php
 
 //include_once("env.php");
-include_once 'funcRedacao.php';
-include_once 'funcSimulado.php';
-include_once 'enviarEmail.php';
 
 $Notificacao = ('{"date":"09/11/2016 06:34:28","env":"prod","event":"invoice.status_updated","resource":{"amount":z,"id":y,"status":{"code":3,"description":"Pago"},"subscription_code":"x"}}');
 
 $Notificacao = json_decode($Notificacao);
 var_dump($Notificacao);
 
-if ($Notificacao->event == "customer.created");
+if ($Notificacao->event == "plan.created");
+      //Faz alguma coisa quando um novo plano é criado
+else if ($Notificacao->event == "plan.updated");
+      //Faz alguma coisa quando um plano é atualizado
+else if ($Notificacao->event == "plan.activated");
+      //Faz alguma coisa quando um plano é ativado
+else if ($Notificacao->event == "plan.inactivated");
+      //Faz alguma coisa quando um plano é desativado
+
+else if ($Notificacao->event == "customer.created");
       //Faz alguma coisa quando um assinante é criado
 else if ($Notificacao->event == "customer.updated");
       //Faz alguma coisa quando um assinante é atualizado
